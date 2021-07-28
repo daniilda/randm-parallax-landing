@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<Head>
+    <meta name="viewport" charset="utf-8" content="width=device-width, user-scalable=no">
+    <title>Daniels Page</title>
+
+    <script src="https://kit.fontawesome.com/e568d3f47d.js" crossorigin="anonymous"></script>
+    <script src="scripts/animation.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+
+    <link href="styles/all.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/png">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</Head>
+<body>
+    <header>
+        <div class = "logo">
+            <a href="index.html"><img
+                    src="img/logo.png"
+                    alt="FUCKYOU"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active" id="li1">Домой</a></li>
+            <li><a href="#secondwindow" id="li2">Наши Проекты</a></li>
+            <li><a href="#contact" id="li3">Связаться с Нами</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+
+    <section>
+        <img src="img/stars.png" id="stars">
+        <img src="img/portal2.png" id="portal">
+        <img src="img/rinkandjerry.png" id="rick">
+        <h2 id="text">ToxiCode</h2>
+        <a href="#mainwindow" id="expl">Узнать больше</a>
+        <img src="img/mountains_behind.png" id="mountains">
+    </section>
+    <div class="mainwindow" id="mainwindow">
+        <h2>Some information here</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <div class="secondwindow" id="secondwindow">
+        <img src="img/liljerry.png" id="liljerry"/>
+        <div class="examples">
+
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                        <h2>01</h2>
+                        <h3>Первый пример</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <a class="myLinkModal" href="#" id="win1">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+
+<!--            <a class="myLinkModal" href="#">btn</a>-->
+<!--     Начало поля боя       -->
+            <div class="myModal" id="opwin1">
+                <img width="600" height="380" src="img/HelloThere.jpg" >
+                <span class="myModal__close" id="modalClose1">ₓ</span>
+            </div>
+            <div class="myOverlay" id="overlay1"></div>
+
+
+            <div class="myModal" id="opwin2">
+                <img width="600" height="380" src="img/HelloThere.jpg">
+                <span class="myModal__close" id="modalClose2">ₓ</span>
+            </div>
+            <div class="myOverlay" id="overlay2"></div>
+
+            <div class="myModal" id="opwin3">
+                <img width="600" height="380" src="img/HelloThere.jpg">
+                <span class="myModal__close" id="modalClose3">ₓ</span>
+            </div>
+            <div class="myOverlay" id="overlay3"></div>
+
+<!--   Окончание поля боя    -->
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                        <h2>02</h2>
+                        <h3>Второй пример</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <a class="myLinkModal" href="#" id="win2">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                        <h2>03</h2>
+                        <h3>Третий пример</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <a class="myLinkModal" href="#" id="win3">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contactus" id="contact">
+        <div class="backg">
+            <h2>Свяжитесь с нами!</h2>
+            <p>Оставте нам вашу почту и мы обязательно свяжемся с вами</p>
+            <form>
+                   <input placeholder="example@gmail.com" type="email" class="emailbox">
+                    <input type="submit" name="" value="Отправить">
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="contain">
+            <div class="sec links">
+                <h2>Наши соцсети</h2>
+
+
+            <ui class="sci">
+                <li><a href="#">
+                    <i class="fa fa-twitter"></i>
+                </a></li>
+                <li>            <a href="#">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a></li>
+                <li>            <a href="#">
+                    <i class="fa fa-vk" aria-hidden="true"></i>
+                </a></li>
+                <li>            <a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a></li>
+                <li>            <a href="#">
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                </a></li>
+                <li><img src="img/fire.gif" height="60" width="60" alt="" style="padding-bottom: 10px"> </li>
+            </ui>
+            </div>
+
+            <div class="sec about">
+                <h2>О Нас</h2>
+                <p>Тяп ляп и в продакшен =)</p>
+            </div>
+        </div>
+    </footer>
+<div class="copyright"><p>&copy 2021 ToxiCode. Все Права Защищены.</p></div>
+</body>
+</html>

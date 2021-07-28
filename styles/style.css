@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
+:root{
+    --main-font: 'Source Sans Pro', sans-serif;
+    --secondary-font: 'Herr Von Muellerhoff', cursive;
+    --body-font: 'Cabin', sans-serif ;
+    --main-font-color-dark: #474747;
+    --secondary-font-color: #c59d5f;
+    --body-font-color: #515151;
+}*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: var(--body-font);
+    font-size: 20px;
+    color: var(--body-font-color);
+    scroll-behavior: smooth;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+header .logo {
+
+}
+.nav-links {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(225, 225, 225, 0.50);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+.nav-links li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+.nav-links li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: rgba(57, 57, 57, 0.8);
+    border-radius: 20px;
+    background: rgba(225, 225, 225, 0.35);
+}
+.nav-links li a:hover
+{
+    background: #fff;
+    color: rgb(116, 98, 176);
+    transition-duration: 0.7s;
+}
+.nav-links li .active{
+    background: #fff;
+    color: rgb(116, 98, 176);
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    background-color: black;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 830px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        background: rgba(225, 225, 225, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 0;
+        width: 50%;
+        transform: translateX(100%);
+    }
+    .nav-links li{
+            opacity:  0;
+    }
+    .burger{
+        z-index: 10;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .nav-links{
+        width: 100%;
+    }
+}
+
+.nav-active{
+    transition: transform 0.6s ease-in;
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(to right top, #6A6AAD, #26ADF3);
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+}
+section::before
+{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #6A6AAD, transparent );
+    z-index: 6;
+}
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section img#portal {
+    mix-blend-mode: screen;
+}
+#text
+{
+position: absolute;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 5;
+
+}
+#rick {
+    z-index: 4;
+}
+#expl{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+.mainwindow{
+    position: relative;
+    padding: 100px;
+    background: linear-gradient(to bottom, #6A6AAD, rgba(225, 225, 225,0.3));
+    height: 100%;
+}
+.mainwindow h2
+{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+.mainwindow p{
+    font-size: 1.2em;
+    color: white;
+}
+.secondwindow{
+    background: rgba(225, 225, 225,0.3);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 100px;
+
+}
+
+.secondwindow .examples{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    background: linear-gradient(to right bottom, rgba(225,225,225,0.1), transparent);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(225,225,225,0.1);
+    border-bottom: 1px solid rgba(225,225,225,0.1);
+    border-radius: 25px;
+    z-index: 2;
+}
+
+.secondwindow #liljerry{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    padding-right: 100px;
+    object-fit: cover;
+    max-height: 580px;
+    height: 50vw;
+}
+
+.secondwindow .examples .card{
+    position: relative;
+    width:  320px;
+    height: 440px;
+    z-index: 3;
+    border-radius: 15px;
+    margin: 30px;
+}
+
+.secondwindow .examples .card .box{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: rgba(235, 245, 252, 0.82);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 4;
+}
+.secondwindow .examples .card:hover .box{
+    transform: translateY(-50px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    background: linear-gradient(45deg, #b95ce4, #4f29cd);
+}
+
+.secondwindow .examples .card .box .content{
+    padding: 20px;
+    text-align: center;
+}
+.secondwindow .examples .card .box .content h2{
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(0,0,0, 0.02);
+    transition: 0.5s;
+    pointer-events: none;
+}
+.secondwindow .examples .card:hover .box .content h2{
+    color: rgba(0,0,0, 0.05);
+}
+
+.secondwindow .examples .card .box .content h3{
+    font-size: 1.8em;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.secondwindow .examples .card:hover .box .content p,
+.secondwindow .examples .card:hover .box .content h3{
+    color: #fff;
+}
+.secondwindow .examples .card .box .content p{
+    font-size: 1em;
+    font-weight: 300;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.secondwindow .examples .card .box .content a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #03a9f4;
+    margin-top: 15px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    z-index: 5;
+}
+.secondwindow .examples .card:hover .box .content a{
+    background: #ff568f;
+}
+
+
+
+.contactus{
+    position: relative;
+    background: linear-gradient(to bottom, rgba(225, 225, 225,0.3),#6A6AAD) ;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 100px;
+
+}
+.contactus::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    right: 0;
+    background: linear-gradient(to top, #8a57d7, transparent );
+    z-index: 1;
+
+}
+.contactus .backg{
+    position: relative;
+    /*height: 100%;*/
+    width: 100%;
+    padding: 100px;
+    background: linear-gradient(to right bottom, rgba(225,225,225,0.1), transparent);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(225,225,225,0.1);
+    border-bottom: 1px solid rgba(225,225,225,0.1);
+    border-radius: 25px;
+    z-index: 1;
+    height: 100%;
+    max-height: 600px;
+}
+.contactus .backg h2{
+    right: 0px;
+    font-size: 6rem;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.contactus .backg p{
+    font-size: 1.8rem;
+    color: rgba(0,0,0, 0.1);
+    text-align: center;
+    margin-bottom: 50px;
+}
+.contactus .backg form{
+    display: flex;
+    justify-content: center;
+}
+.contactus .backg form input{
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+.contactus .backg form input[type="email"]{
+    background: #fff;
+    width: 600px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 15px 0 0 15px;
+    background: rgba(225, 225, 225,0.3);
+}
+.contactus .backg form input[type="submit"]{
+    position: relative;
+    border-radius: 0 15px 15px 0;
+    height: 50px;
+    width: 200px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: rgba(225, 225, 225,0.7);
+    transition: .3s;
+}
+.contactus .backg form input[type="submit"]:hover{
+    background: rgba(255, 255, 255, 0.64);
+}
+footer {
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    left: 0;
+    background: #8a57d7;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+
+}
+footer .contain{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 20px;
+}
+footer .contain .sec h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+footer .contain .sec p{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.sci{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 50px);
+    grid-gap: 10px;
+}
+.sci li{
+    list-style: none;
+}
+.sci li a{
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    background: rgba(225, 225, 225,0.3);
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.sci li a:hover{
+    background: rgba(225, 225, 225,0.7);
+}
+.sci li a .fa
+{
+    color: white;
+    font-size: 20px;
+}
+.copyright{
+    background: white;
+    text-align: center;
+}
+
+
+/*footer a i:hover{*/
+/*    padding: 6px 6px;*/
+/*    color: black;*/
+/*    background: white;*/
+/*    border-radius: 35px;*/
+/*}*/
+
+
+.focus{
+    right: 0;
+    padding-right: 20px;
+}
+
+
+
+
+
+
+/* Не твоя теретория, не лезь, оно тебя сожрёт! */
+
+
+/* Я вижу шо ты сюда лезешь, не лезь тут шаманские танцы с бубном, оно тебе не надо */
+.myModal {
+    width: 1250px; height: 700px;
+    margin: auto;
+    padding: 18px 9px;
+    border-radius: 4px;
+    background: #fafafa;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: none;
+    opacity: 0;
+    z-index: 38;
+    text-align: center;
+    padding: 100px;
+}
+.myModal .myModal__close {
+    width: 21px; height: 21px;
+    position: absolute;
+    top: 1px; right: 11px;
+    cursor: pointer;
+    display: block;
+    font-size: 29px;
+}
+.myOverlay {
+    z-index: 37;
+    position: fixed;
+    background-color: rgba(0,0,0,.7);
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    cursor :pointer;
+    display :none;
+}
